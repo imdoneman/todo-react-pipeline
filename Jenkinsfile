@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('git checkout') {
             steps {
-                git changelog: false, poll: false, url: 'https://github.com/imdoneman/todo-react-pipeline.git'
+                git branch: 'main', changelog: false, poll: false, url: 'https://github.com/imdoneman/todo-react-pipeline.git'
             }
         }
 
