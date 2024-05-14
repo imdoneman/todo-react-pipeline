@@ -35,5 +35,14 @@ pipeline {
         //         dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
         //     }
         // }
+
+        stage('docker build & push') {
+            steps {
+                withDockerRegistry(credentialsId: '9720eb90-405f-4150-970c-3c71af4ba50b', toolName: 'docker') {
+                    sh 'docker build -t dockeriamdoneman/todo-react:latest'
+                    sh 'docker push dockeriamdoneman/todo-react:latest'
+                }
+            }
+        }
     }
 }
