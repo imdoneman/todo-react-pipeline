@@ -5,10 +5,6 @@ pipeline {
         nodejs 'node'
     }
 
-    environment {
-        SCANNER_HOME = tool 'sona-scanner'
-    }
-
     stages {
         stage('git checkout') {
             steps {
@@ -38,7 +34,7 @@ pipeline {
 
         stage('docker build & push') {
             steps {
-                withDockerRegistry(credentialsId: '9720eb90-405f-4150-970c-3c71af4ba50b', url:'https://index.docker.io/v1/') {
+                withDockerRegistry(credentialsId: 'dockerhub', url:'https://index.docker.io/v1/') {
                     sh 'docker build -t dockeriamdoneman/todo-react:latest .'
                     sh 'docker push dockeriamdoneman/todo-react:latest'
                 }
