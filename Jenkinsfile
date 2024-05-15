@@ -4,6 +4,10 @@ pipeline {
     tools {
         nodejs 'node'
     }
+    
+    environment {     
+        DOCKERHUB_CREDENTIALS= credentials('dockerhub')     
+    }
 
     stages {
         stage('git checkout') {
@@ -34,10 +38,9 @@ pipeline {
 
         stage('docker build & push') {
             steps {
-                // withDockerRegistry(credentialsId: 'dockerhub', url:'https://index.docker.io/v1/') {
-                    sh 'docker build -t dockeriamdoneman/todo-react:latest .'
-                //     sh 'docker push dockeriamdoneman/todo-react:latest'
-                // }
+                sh 'docker build -t dockeriamdoneman/todo-react:latest .'
+                sh 'echo $DOCKERHUB_CREDENTIALS_PSW | sudo docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+                sh 'docker push dockeriamdoneman/todo-react:latest'
             }
         }
     }
