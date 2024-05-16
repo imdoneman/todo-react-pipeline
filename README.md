@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# Todo-react pipeline
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project focuses on constructing a robust Jenkins pipeline tailored for production use. The pipeline automates the build process for the Todo React web application. Once built, the pipeline proceeds to package the React app into a Docker image, which is then pushed to a Docker repository for easy deployment and distribution.
 
-## Available Scripts
+Here will the image of the jenkins build
 
-In the project directory, you can run:
+## Built With
 
-### `npm start`
+Below are the tools utilized to construct both the pipeline and the Todo React application:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+here will be all the tools logo
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+To recreate this project in your local environment, follow the steps below:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### 1. Fork the project from the https://github.com/imdoneman/todo-react-pipeline.
 
-### `npm run build`
+#### 2. Set up a VM or cloud compute instance.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### 3. Install Docker on the VM.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### 4. Pull and run the Jenkins/Jenkins Docker image. You should follow the Docker command to run the Docker container:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    docker run -d -p 8080:8080 \
+    -p 50000:50000 \
+    -v jenkins_home:/var/jenkins_home \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -v $(which docker):/usr/bin/docker \
+    jenkins/jenkins
 
-### `npm run eject`
+Disclaimer: Please note that the given command works for Linux-based distributions.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### 5. Get inside the Docker container's bash shell using the following command:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    docker exec -it -u 0 <container_id> /bin/bash
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Then, install Node.js and npm inside the container.
+Get inside the Docker container's bash shell using the following command:
+bash
+Copy code
+docker exec -it -u 0 <container_id> /bin/bash
+Then, install Node.js and npm inside the container.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### 6. Now, go to any browser and access the Jenkins web UI using localhost:8080 for a local VM or using IPv4:8080 for the cloud instance.
 
-## Learn More
+#### 7. After setting up Jenkins, install the following plugins: Node.js plugin.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### 8. Create credentials for GitHub and DockerHub (Credential ID should be "dockerhub") in the Jenkins credentials section.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### 9. Configure the Git and Node.js plugins. (Image will be provided)
 
-### Code Splitting
+#### 10. Finally, create a new job, name the job as per your choice, select the job type as Pipeline, and save.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Now that all the steps are completed, click the "Build Now" button, and the magic will happen
 
-### Analyzing the Bundle Size
+## Authors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- [Shani_majumdar - github](https://www.github.com/imdoneman)
+- [Shani_majumdar - linkedin](www.linkedin.com/in/shani-majumder-686070132)
 
-### Making a Progressive Web App
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[MIT](https://choosealicense.com/licenses/mit/)
