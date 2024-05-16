@@ -42,11 +42,6 @@ Disclaimer: Please note that the given command works for Linux-based distributio
     docker exec -it -u 0 <container_id> /bin/bash
 
 Then, install Node.js and npm inside the container.
-Get inside the Docker container's bash shell using the following command:
-bash
-Copy code
-docker exec -it -u 0 <container_id> /bin/bash
-Then, install Node.js and npm inside the container.
 
 #### 6. Now, go to any browser and access the Jenkins web UI using localhost:8080 for a local VM or using IPv4:8080 for the cloud instance.
 
