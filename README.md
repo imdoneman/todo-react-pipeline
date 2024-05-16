@@ -58,7 +58,7 @@ Now that all the steps are completed, click the "Build Now" button, and the magi
 ## Authors
 
 - [Shani_majumdar - github](https://www.github.com/imdoneman/)
-- [Shani_majumdar - linkedin](www.linkedin.com/in/shani-majumder-686070132/)
+- [Shani_majumdar - linkedin](https://www.linkedin.com/in/shani-majumder-686070132/)
 
 ## License
 
