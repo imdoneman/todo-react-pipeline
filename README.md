@@ -2,13 +2,19 @@
 
 This project focuses on constructing a robust Jenkins pipeline tailored for production use. The pipeline automates the build process for the Todo React web application. Once built, the pipeline proceeds to package the React app into a Docker image, which is then pushed to a Docker repository for easy deployment and distribution.
 
-Here will the image of the jenkins build
+![todo-react diagram](https://github.com/imdoneman/todo-react-pipeline/assets/37260737/a8446465-87df-44b6-a48e-7bcce67df719)
+
 
 ## Built With
 
 Below are the tools utilized to construct both the pipeline and the Todo React application:
 
-here will be all the tools logo
+![github-original-wordmark](https://github.com/imdoneman/todo-react-pipeline/assets/37260737/bb2c2379-dff4-4259-a10e-de23e33b0bab)
+![jenkins](https://github.com/imdoneman/todo-react-pipeline/assets/37260737/a1a0f642-949c-4772-b4e5-bbd7172bd36a)
+![nodejs](https://github.com/imdoneman/todo-react-pipeline/assets/37260737/3907ca05-47cc-4926-9a53-fd929e61016a)
+![docker-original-wordmark](https://github.com/imdoneman/todo-react-pipeline/assets/37260737/6577c752-05af-4ef8-8a2c-41fddfa4707b)
+![Docker Hub](https://github.com/imdoneman/todo-react-pipeline/assets/37260737/7bdeca34-a5c8-463a-b211-113a4480f7c1)
+
 
 ## Getting Started
 
@@ -48,7 +54,7 @@ Then, install Node.js and npm inside the container.
 
 #### 8. Create credentials for GitHub and DockerHub (Credential ID should be "dockerhub") in the Jenkins credentials section.
 
-#### 9. Configure the Git and Node.js plugins. (Image will be provided)
+#### 9. Configure the Git and Node.js plugins.
 
 #### 10. Finally, create a new job, name the job as per your choice, select the job type as Pipeline, and save.
 
