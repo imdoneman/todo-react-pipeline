@@ -9,11 +9,11 @@ This project focuses on constructing a robust Jenkins pipeline tailored for prod
 
 Below are the tools utilized to construct both the pipeline and the Todo React application:
 
-<img src="https://github.com/imdoneman/todo-react-pipeline/assets/37260737/bb2c2379-dff4-4259-a10e-de23e33b0bab" width="300" height="300"><br>
-<img src="https://github.com/imdoneman/todo-react-pipeline/assets/37260737/a1a0f642-949c-4772-b4e5-bbd7172bd36a" width="300" height="300"><br>
-<img src="https://github.com/imdoneman/todo-react-pipeline/assets/37260737/3907ca05-47cc-4926-9a53-fd929e61016a" width="300" height="300"><br>
-<img src="https://github.com/imdoneman/todo-react-pipeline/assets/37260737/6577c752-05af-4ef8-8a2c-41fddfa4707b" width="300" height="300"><br>
-<img src="https://github.com/imdoneman/todo-react-pipeline/assets/37260737/7bdeca34-a5c8-463a-b211-113a4480f7c1" width="300" height="300">
+<img src="https://github.com/imdoneman/todo-react-pipeline/assets/37260737/bb2c2379-dff4-4259-a10e-de23e33b0bab" width="200" height="200"><br>
+<img src="https://github.com/imdoneman/todo-react-pipeline/assets/37260737/a1a0f642-949c-4772-b4e5-bbd7172bd36a" width="200" height="200"><br>
+<img src="https://github.com/imdoneman/todo-react-pipeline/assets/37260737/3907ca05-47cc-4926-9a53-fd929e61016a" width="200" height="200"><br>
+<img src="https://github.com/imdoneman/todo-react-pipeline/assets/37260737/6577c752-05af-4ef8-8a2c-41fddfa4707b" width="200" height="200"><br>
+<img src="https://github.com/imdoneman/todo-react-pipeline/assets/37260737/7bdeca34-a5c8-463a-b211-113a4480f7c1" width="200" height="200">
 
 
 ## Getting Started
