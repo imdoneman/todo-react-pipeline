@@ -54,6 +54,8 @@ Then, install Node.js and npm inside the container.
 #### 10. Finally, create a new job, name the job as per your choice, select the job type as Pipeline, and save.
 
 Now that all the steps are completed, click the "Build Now" button, and the magic will happen
+## Final Output
+#### Kindly access the final Docker image using the following link:- [dockeriamdoneman/todo-react:latest](https://hub.docker.com/r/dockeriamdoneman/todo-react)
 
 ## Authors
 
